@@ -18,7 +18,7 @@ router.post("/tasks", auth, validateSchema(createTaskSchema), createTask);
 
 router.get("/tasks/:id", auth, getTask);
 
-router.put("/tasks/:id", auth, updateTask);
+router.put("/tasks/:id", auth, validateSchema(createTaskSchema), updateTask);
 
 router.delete("/tasks/:id", auth, deleteTask);
 
